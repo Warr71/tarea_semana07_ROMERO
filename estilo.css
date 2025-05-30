@@ -1,0 +1,38 @@
+ body {
+            background-color: #cfe2cf;
+           
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ccf57f;
+            border-radius: 5px;
+        }
+        .form-section {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar{
+            background-color: rgb(121, 255, 44) !important;
+            font-family: monospace;
+        }
+
+        .navbar-brand, .nav-link {
+    color: #2421b4 !important;
+    
+}
+
+
+.nav-link:hover {
+    color: #066d17 !important;
+}
+
+.btn{
+    background-color: red;
+}

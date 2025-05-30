@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    
+    <title>Cálculos de Pagos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Cálculos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#caso1">Caso 1: Instituto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#caso2">Caso 2: Trabajador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#caso3">Caso 3: Obrero</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Caso 1: Instituto -->
+        <div id="caso1" class="form-section my-4">
+            <h2>Caso 1: Importe a Pagar por Alumno</h2>
+            <form id="formCaso1">
+                <div class="mb-3">
+                    <label for="cuota" class="form-label">Cuota Base (S/.)</label>
+                    <input type="number" class="form-control" id="cuota" step="0.01" required>
+                </div>
+                <div class="mb-3">
+                    <label for="instituto" class="form-label">Instituto de Procedencia</label>
+                    <select class="form-select" id="instituto" required>
+                        <option value="">Seleccione</option>
+                        <option value="publico">Público</option>
+                        <option value="privado">Privado</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría</label>
+                    <select class="form-select" id="categoria" required>
+                        <option value="">Seleccione</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </form>
+            <div id="resultadoCaso1" class="result d-none"></div>
+        </div>
+
+        <!-- Caso 2: Trabajador -->
+        <div id="caso2" class="form-section my-4">
+            <h2>Caso 2: Neto a Cobrar por Trabajador</h2>
+            <form id="formCaso2">
+                <div class="mb-3">
+                    <label for="sueldoBase" class="form-label">Sueldo Base (S/.)</label>
+                    <input type="number" class="form-control" id="sueldoBase" step="0.01" required>
+                </div>
+                <div class="mb-3">
+                    <label for="estadoCivil" class="form-label">Estado Civil</label>
+                    <select class="form-select" id="estadoCivil" required>
+                        <option value="">Seleccione</option>
+                        <option value="soltero">Soltero</option>
+                        <option value="casado">Casado</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="numHijos" class="form-label">Número de Hijos</label>
+                    <input type="number" class="form-control" id="numHijos" min="0" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </form>
+            <div id="resultadoCaso2" class="result d-none"></div>
+        </div>
+
+        <!-- Caso 3: Obrero -->
+        <div id="caso3" class="form-section my-4">
+            <h2>Caso 3: Sueldo Mensual de Obrero</h2>
+            <form id="formCaso3">
+                <div class="mb-3">
+                    <label for="prenda" class="form-label">Tipo de Prenda</label>
+                    <select class="form-select" id="prenda" required>
+                        <option value="">Seleccione</option>
+                        <option value="polo">Polo (S/. 5.00/unidad)</option>
+                        <option value="pantalon">Pantalón (S/. 8.00/unidad)</option>
+                        <option value="camisa">Camisa (S/. 6.50/unidad)</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="unidades" class="form-label">Unidades Confeccionadas</label>
+                    <input type="number" class="form-control" id="unidades" min="1" required>
+                </div>
+                <div class="mb-3">
+                    <label for="categoriaObrero" class="form-label">Categoría del Obrero</label>
+                    <select class="form-select" id="categoriaObrero" required>
+                        <option value="">Seleccione</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </form>
+            <div id="resultadoCaso3" class="result d-none"></div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+   
+    <script src="caso1.js"></script>
+    <script src="caso2.js"></script>
+    <script src="caso3.js"></script>
+</body>
+</html>
